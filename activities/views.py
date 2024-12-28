@@ -132,3 +132,9 @@ def search(request):
             {"activities": activities, "keyword": keyword},
         )
     return render(request, "activities/search.html", {"activities": activities})
+
+    return render(request,"activities/search.html")
+
+def information(request):
+    return render(request,"activities/information.html")
+

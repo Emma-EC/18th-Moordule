@@ -101,20 +101,13 @@ def confirm_delete(request, activity_id):
         return redirect("activities:index")
     return render(request, "activities/confirm_delete.html", {"activity": activity})
 
-
-# def search(request):
-#     activities = Activity.objects.all()
-
-#     if request.POST:
-#         keyword = request.POST.get("keyword", "")
-
-#         activities = activities.filter(title=keyword)
-#         return redirect("activities:search")
-
-#     return render(request, "activities/search.html", {"activities": activities})
-
-
 def search(request):
+<<<<<<< HEAD
+    return render(request,"activities/search.html")
+
+def information(request):
+    return render(request,"activities/information.html")
+=======
     activities = Activity.objects.all()
 
     if request.method == "POST":  # 確保處理 POST 請求
@@ -132,8 +125,4 @@ def search(request):
             {"activities": activities, "keyword": keyword},
         )
     return render(request, "activities/search.html", {"activities": activities})
-
-
-def information(request):
-    return render(request,"activities/information.html")
-
+>>>>>>> cf5b71b ( feat:search bar)

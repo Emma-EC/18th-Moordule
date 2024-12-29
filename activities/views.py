@@ -102,14 +102,7 @@ def confirm_delete(request, activity_id):
     return render(request, "activities/confirm_delete.html", {"activity": activity})
 
 def search(request):
-<<<<<<< HEAD
-    return render(request,"activities/search.html")
-
-def information(request):
-    return render(request,"activities/information.html")
-=======
     activities = Activity.objects.all()
-
     if request.method == "POST":  # 確保處理 POST 請求
         keyword = request.POST.get("keyword", "").strip()  # 去除多餘的空白
         if keyword:
@@ -119,10 +112,10 @@ def information(request):
                 | Q(description__icontains=keyword)
                 | Q(address__icontains=keyword)
             )
-        return render(
-            request,
-            "activities/search.html",
+        return render(request,"activities/search.html",
             {"activities": activities, "keyword": keyword},
         )
     return render(request, "activities/search.html", {"activities": activities})
->>>>>>> cf5b71b ( feat:search bar)
+
+def information(request):
+    return render(request,"activities/information.html")

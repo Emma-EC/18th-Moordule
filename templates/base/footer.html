@@ -1,0 +1,117 @@
+<!-- Wave Section -->
+<section class="relative bg-[#90CCF4] text-center text-white">
+    <!-- 回到頂部按鈕 -->
+    <a href="#top">
+        <button
+        onclick="scrollToTop()"
+        class="fixed bottom-4 right-4 w-14 h-14 bg-yellow-300 text-white rounded-full shadow-lg flex items-center justify-center hover:bg-yellow-400 transition duration-300"
+        aria-label="Back to top"
+        >
+        <svg
+            class="w-8 h-8"
+            fill="#ffffff"
+            viewBox="0 0 32 32"
+            xmlns="http://www.w3.org/2000/svg"
+            stroke="#ffffff"
+        >
+            <path
+            d="M0 16q0-3.232 1.28-6.208t3.392-5.12 5.12-3.392 6.208-1.28q3.264 0 6.24 1.28t5.088 3.392 3.392 5.12 1.28 6.208q0 3.264-1.28 6.208t-3.392 5.12-5.12 3.424-6.208 1.248-6.208-1.248-5.12-3.424-3.392-5.12-1.28-6.208zM4 16q0 3.264 1.6 6.048t4.384 4.352 6.016 1.6 6.016-1.6 4.384-4.352 1.6-6.048-1.6-6.016-4.384-4.352-6.016-1.632-6.016 1.632-4.384 4.352-1.6 6.016zM10.048 13.632q0.096-0.608 0.544-1.056l4-4q0.576-0.576 1.408-0.576t1.408 0.576l4 4q0.448 0.448 0.544 1.056t-0.096 1.152q-0.224 0.544-0.736 0.896t-1.12 0.32h-1.984v6.016q0 0.832-0.608 1.408t-1.408 0.576-1.408-0.576-0.576-1.408v-6.016h-2.016q-0.608 0-1.12-0.32t-0.736-0.896-0.096-1.152z"
+            ></path>
+        </svg>
+        </button>
+    </a>
+    <div
+    class="w-full h-40 bg-[#90CCF4] absolute top-0 left-0 transform rotate-180"
+    >
+    <!-- 波浪形狀 -->
+    <svg class="absolute bottom-0" viewBox="0 0 1440 320">
+        <path
+        fill="#ffffff"
+        fill-opacity="1"
+        d="M0,192L120,208C240,224,480,256,720,261.3C960,267,1200,245,1320,234.7L1440,224L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
+        ></path>
+    </svg>
+    </div>
+    <div class="relative z-9 py-12">
+    <img
+        src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*M9eXElapdctvl-nQbPG38w.jpeg"
+        alt="logo"
+        class="w-28 h-28 rounded-full mx-auto mb-4 mt-12"
+    />
+    <img
+        src="https://images-ext-1.discordapp.net/external/6UDvMqnipWjiiMal8_5s93__kSr0iP48UGVD2cXq-MA/https/miro.medium.com/v2/resize%3Afit%3A1400/format%3Awebp/1%2AseN1IMwY8s71iEGsHtSCnA.png?format=webp&quality=lossless&width=1920&height=288"
+        alt="logo-text"
+        class="mx-auto mb-4"
+    />
+    </div>
+</section>
+
+<!-- Links Section -->
+<section class="bg-[#90CCF4] text-white py-8">
+    <div
+    class="container mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-4 text-sm text-center bg-[#90CCF4]"
+    >
+    <!-- 活動相關 -->
+        <div>
+            <h3 class="font-bold text-lg mb-2">活動相關</h3>
+            <ul class="space-y-1">
+            <li>特別活動</li>
+            <li>今日聚會</li>
+            <a href="{% url 'activities:index' %}#eat">
+                <li>揪要吃飯</li>
+            </a>
+            <li>揪要運動</li>
+            <li>揪要喝酒</li>
+            <li>揪要電影</li>
+            <li>揪要唱歌</li>
+            <li>揪要討論</li>
+            </ul>
+        </div>
+
+        <!-- 服務相關 -->
+        <div>
+            <h3 class="font-bold text-lg mb-2">服務相關</h3>
+            <ul class="space-y-1">
+            <li>F & Q</li>
+            <li>收費方式</li>
+            <li>隱私政策</li>
+            <li>使用條款</li>
+            </ul>
+        </div>
+
+        <!-- 會員相關 -->
+        <div>
+            <h3 class="font-bold text-lg mb-2">會員相關</h3>
+            <ul class="space-y-1">
+            <li>我的頁面</li>
+            <li>我的紀錄</li>
+            <li>我要揪團</li>
+            <li>我的聚會</li>
+            <li>我的錢包</li>
+            <li>我的通知</li>
+            </ul>
+        </div>
+
+        <!-- 社群媒體 -->
+        <div>
+            <h3 class="font-bold text-lg mb-2">社群媒體</h3>
+            <ul class="space-y-1">
+            <li>Facebook</li>
+            <li>Instagram</li>
+            <li>Discord</li>
+            <a href="https://github.com/astrocamp/18th-Moordule">
+                <li>GitHub</li>
+            </a>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-[#5DA2D5] text-center text-white text-sm py-4">
+    <p>公司：中文名字還沒確定股份有限公司</p>
+    <p>統編：13145200</p>
+    <p>地址：168 衡陽路7號5樓, 台北市, 台灣</p>
+    <p>客服信箱：service@moordule.com</p>
+    <p>© 2024 ALL RIGHTS RESERVED ReCharm Internation Match Ltd.</p>
+</footer>

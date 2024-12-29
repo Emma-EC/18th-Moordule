@@ -1,52 +1,18 @@
-<!DOCTYPE html>
+
 {% extends "base/layout.html" %}
-{% load static %}
 
 {%block head%}
-    <!-- 引入 Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- 引入 Flaticon 圖示庫 -->
-    <link
-      rel="stylesheet"
-      href="https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css"
-    />
+<title>member</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- 引入 Flaticon 圖示庫 -->
+<link
+  rel="stylesheet"
+  href="https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css"
+/>
 {%endblock head%}
 
 {%block content%}
-
   <div class="bg-gray-100">
-    <!-- Header Navigation -->
-    <header class="bg-white p-5 flex justify-between items-center shadow-md">
-      <!-- Logo -->
-      <div class="text-2xl font-bold flex items-center">
-        <img src="{% static 'logo.png' %}" alt="Logo" class="w-8 h-8 mr-2">
-        <span>MOORDULE 多揪</span>
-      </div>
-
-      <!-- 搜尋框與按鈕 -->
-      <div class="flex items-center space-x-4 ml-auto">
-        <div class="relative">
-          <!-- 搜尋圖示 -->
-          <i class="fi fi-rr-search absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
-          <!-- 搜尋框 -->
-          <input
-            type="text"
-            placeholder="我想要揪..."
-            class="border border-gray-300 pr-10 pl-4 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-yellow-500 text-gray-500 w-60"
-          />
-        </div>
-
-        <!-- 活動按鈕 -->
-        <button class="bg-[#F78888] text-white rounded-[50px] px-[20px] py-[10px]">
-          活動
-        </button>
-        <!-- 登出按鈕 -->
-        <button class="bg-[#5DA2D5] text-white rounded-[50px] px-[20px] py-[10px]">
-          登出
-        </button>
-      </div>
-    </header>
-
     <!-- Navigation Bar -->
     <nav class="space-x-5 flex justify-center items-center mt-5 mx-auto w-max">
       <a href="#" class="text-yellow-500">
@@ -103,7 +69,7 @@
 
 
     <!-- Main Container -->
-    <main class="max-w-screen-lg mx-auto mt-6 p-[30px] bg-yellow-300 rounded-[24px] p-6 grid grid-cols-3 gap-4">
+    <div class="max-w-screen-lg mx-auto mt-6 p-[30px] bg-yellow-300 rounded-[24px] p-6 grid grid-cols-3 gap-4">
       <!-- 左側：用戶資訊 -->
       <div class="bg-white rounded-lg shadow-lg p-4 flex flex-col items-center">
         <div class="w-48 h-48 bg-gray-300 rounded-lg flex items-center justify-center">
@@ -144,6 +110,6 @@
         <p class="mt-2 text-gray-700">用戶輸入自我介紹 {% lorem 1 b random %}</p>
         <button class="mt-4 bg-yellow-400 text-white px-4 py-2 rounded-full hover:bg-yellow-500">編輯</button>
       </div>
-    </main>
-  </body>
+    </div>
+  </div>
   {%endblock content%}

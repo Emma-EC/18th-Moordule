@@ -101,19 +101,6 @@ def confirm_delete(request, activity_id):
         return redirect("activities:index")
     return render(request, "activities/confirm_delete.html", {"activity": activity})
 
-
-# def search(request):
-#     activities = Activity.objects.all()
-
-#     if request.POST:
-#         keyword = request.POST.get("keyword", "")
-
-#         activities = activities.filter(title=keyword)
-#         return redirect("activities:search")
-
-#     return render(request, "activities/search.html", {"activities": activities})
-
-
 def search(request):
     activities = Activity.objects.all()
 

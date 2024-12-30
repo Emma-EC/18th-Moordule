@@ -1,6 +1,6 @@
 # Moordule 多揪
 
-![moordule](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*M9eXElapdctvl-nQbPG38w.jpeg)
+![moordule](<https://miro.medium.com/v2/resize:fit:1400/format:webp/1*M9eXElapdctvl-nQbPG38w.jpeg> =300x300)
 ![moordule-text](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*sphjBoiQpYV1I4Z5hOl5Qw.jpeg)
 
 ### 揪朋友 來多揪 越揪越多好朋友
@@ -9,8 +9,9 @@
 
 掃描 QR Code，輕鬆加入聚會，開啟人生新篇章
 
-專案網址 : https://www.moordule.com
-TODO 介紹影片  
+專案網址 : https://www.moordule.com  
+
+TODO 介紹影片    
 TODO 介紹簡報
 
 ### 關於多揪
@@ -42,7 +43,8 @@ why
 
 ### 使用者功能：
 
-選擇語言：支持繁體中文、英文、日文介面。
+選擇語言：支持繁體中文介面。  
+
 
 ### 會員功能：
 
@@ -65,11 +67,8 @@ VIP 會員制度：
 
 ---
 
-TODO xxx
 
 ## 環境設定
-
----
 
 ### 安裝環境
 
@@ -96,25 +95,28 @@ cd 18th-Moordule(進入專案目錄)
 前端：`Tailwind`,
 後端：`Django`,
 資料庫：`PostgreSQL`, [TablePlus](https://tableplus.com/)
-版本控制：`Git`
+版本控制：`Git`, `GitHub`
 第三方登入：`Google`
-
-郵件發送：Mailgun?  
-部署：Heroku?  
+金流：`Line Pay`
+郵件發送： 
+部署：
 排版設計:`Design.com`, `Illustrator`, `Canva`
-規劃：`Miro`, `Asana`
+專案規劃：`Miro`, `Asana`
+
 
 ## 團隊成員
 
 ---
 
 🌟 鄧鈺馨 Cindy [GitHub](https://github.com/YuHsinTengCindy)  
-團隊負責：書記
+團隊負責：書記  
+- 聚會系統
 
 柳澤豐 RichardT [GitHub](https://github.com/richart-coder)  
 團隊負責：技術負責人
 
 - 資料庫
+- 會員系統
 
 🎀 雷衍辰 Joanna [GitHub](https://github.com/JoannaLei21)  
 團隊負責：小組長
@@ -122,12 +124,17 @@ cd 18th-Moordule(進入專案目錄)
 - logo 製作
 - 建立 flow chart
 - 設計頁面
+- 金流串接
 
 🌟 張家瑞 Gary [GitHub](https://github.com/Gary0306)  
 團隊負責：溝通員
+- 搜尋功能
 
 🌎 陳思妤 Emma [GitHub](https://github.com/Emma-EC)  
 團隊負責：書記
+- 頁面切版
+- Google 第三方登入
 
 王廷安 [GitHub](https://github.com/Tingan111)  
 團隊負責：測試負責人
+- 圖片上傳

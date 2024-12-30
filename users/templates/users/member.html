@@ -66,17 +66,67 @@
   <!-- Main Container -->
   <div id="notification-bar" class="bg-yellow-300 p-6 rounded-[24px] max-w-screen-lg mx-auto mt-6">
     <div class="grid grid-cols-3 gap-4">
-      <!-- 用戶資訊卡 -->
-      <div class="bg-white p-4 rounded-lg shadow-lg">
-        <div class="w-full h-48 bg-gray-200 rounded-lg flex items-center justify-center">
-          <span class="text-gray-500">用戶 photo</span>
+
+    <!-- Navigation Bar -->
+    <nav class="space-x-5 flex justify-center items-center mt-5 mx-auto w-max">
+      <a href="#" class="text-yellow-500">
+        <button class="px-6 py-3 rounded-full hover:bg-yellow-500 text-white bg-yellow-400 text-xl">
+          我的頁面
+        </button>
+      </a>
+      <a href="#">
+        <button class="px-6 py-3 rounded-full hover:bg-yellow-500 text-white bg-yellow-300 text-xl">
+          我的帳號
+        </button>
+      </a>
+      <a href="#">
+        <button class="px-6 py-3 rounded-full hover:bg-yellow-500 text-white bg-yellow-300 text-xl">
+          我的活動
+        </button>
+      </a>
+      <a href="#">
+        <button class="px-6 py-3 rounded-full hover:bg-yellow-500 text-white bg-yellow-300 text-xl">
+          我的收藏
+        </button>
+      </a>
+      <a href="#">
+        <button class="px-6 py-3 rounded-full hover:bg-yellow-500 text-white bg-yellow-300 text-xl">
+          我的紀錄
+        </button>
+      </a>
+      <a href="{% url 'activities:create' %}">
+        <button class="px-6 py-3 rounded-full hover:bg-yellow-500 text-white bg-yellow-300 text-xl">
+          創建活動
+        </button>
+      </a>
+      <a href="#">
+        <button class="px-6 py-3 rounded-full hover:bg-yellow-500 text-white bg-yellow-300 text-xl">
+          聊天室
+        </button>
+      </a>
+      <a href="#">
+        <div class="flex items-center space-x-2">
+          <!-- 系統通知 -->
+          <button class="px-6 py-3 rounded-full hover:bg-yellow-500 text-white bg-yellow-300 text-xl">
+            系統通知
+          </button>
+          <!-- 獨立的 X 按鈕 -->
+          <button
+            class="w-10 h-10 text-white hover:bg-yellow-500 focus:outline-none border bg-yellow-500 rounded-full flex items-center justify-center"
+            onclick="document.getElementById('notification-bar').style.display='none';"
+          >
+          </button>
         </div>
         <div class="w-full h-48 bg-gray-200 rounded-lg flex flex-col items-center justify-center mt-4">
           <h3 class="text-gray-700 font-semibold">— 顯示名稱 —</h3>
           <p class="text-gray-500">興趣 #</p>
         </div>
       </div>
-
+      
+      <!-- 用戶資訊卡 -->
+      <div class="bg-white p-4 rounded-lg shadow-lg">
+        <div class="w-full h-48 bg-gray-200 rounded-lg flex items-center justify-center">
+          <span class="text-gray-500">用戶 photo</span>
       <!-- 活動資訊卡 -->
       <div class="bg-white p-4 rounded-lg shadow-lg">
         <p class="text-gray-500 font-medium text-2xl text-center">已報名的活動</p>

@@ -5,22 +5,19 @@ import json
 import hmac
 import hashlib
 import base64
-import environ
 import requests
+import os
+from dotenv import load_dotenv
+load_dotenv()
 
-# Create your views here.
+
 def index(request):
     return render(request,"index.html")
 
-#連接.env變數
-BASE_DIR = Path(__file__).resolve().parent.parent
-env = environ.Env()
-environ.Env.read_env()
-
 #line pay API header
 def create_headers(body, uri):
-    channel_id = env('LINE_CHANNEL_ID')
-    secret_key = env('LINE_CHANNEL_SECRET_KEY')
+    channel_id = os.getenv('LINE_CHANNEL_ID')
+    secret_key = os.getenv('LINE_CHANNEL_SECRET_KEY')
     nonce = str(uuid.uuid4())
     #header 轉換成json格式
     body_to_json = json.dumps(body)
@@ -66,15 +63,15 @@ def request_payment(request):
                 }]
             }],
             'redirectUrls': {
-                'confirmUrl': f"https://{env('HOSTNAME')}/payment/confirm",
-                'cancelUrl': f"https://{env('HOSTNAME')}/payment/cancel"
+                'confirmUrl': f"https://{os.getenv('HOSTNAME')}/payment/confirm",
+                'cancelUrl': f"https://{os.getenv('HOSTNAME')}/payment/cancel"
             }
         }
 
     # 發送 API 請求
-        uri = env('LINE_REQUEST_URL')
+        uri = os.getenv('LINE_REQUEST_URL')
         headers = create_headers(payload, uri)
-        url = f"{env('LINE_SANDBOX_URL')}{uri}"
+        url = f"{os.getenv('LINE_SANDBOX_URL')}{uri}"
         response = requests.post(url, headers=headers, data=json.dumps(payload))
 
         # 根據狀態，處理回應

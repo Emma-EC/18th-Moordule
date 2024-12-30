@@ -15,8 +15,6 @@ AUTH_USER_MODEL = "users.CustomUser"
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 DEBUG = os.getenv('DEBUG', 'True') == 'True'
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '*').split(',')
-
 # 初始化環境變數
 BASE_DIR = Path(__file__).resolve().parent.parent
 # env = environ.Env(DEBUG=(bool, False))

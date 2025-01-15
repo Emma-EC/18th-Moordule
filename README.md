@@ -76,7 +76,7 @@ cd 18th-Moordule(進入專案目錄)
 
 ## 團隊成員
 
-🌟 鄧鈺馨 Cindy [GitHub](https://github.com/YuHsinTengCindy)  
+鄧鈺馨 Cindy [GitHub](https://github.com/YuHsinTengCindy)  
 - 頁面切版
 - 聚會系統
 - 創建聚會
@@ -86,18 +86,19 @@ cd 18th-Moordule(進入專案目錄)
 - 資料庫
 - 會員系統
 
-🎀 雷衍辰 Joanna [GitHub](https://github.com/JoannaLei21) 
+雷衍辰 Joanna [GitHub](https://github.com/JoannaLei21) 
 - 設計頁面
 - 金流串接
 - Google 地圖串接
 
-🌟 張家瑞 Gary [GitHub](https://github.com/Gary0306)  
+張家瑞 Gary [GitHub](https://github.com/Gary0306)  
 - 搜尋功能
 - Google 日曆串接
 
-🌎 陳思妤 Emma [GitHub](https://github.com/Emma-EC)  
+陳思妤 Emma [GitHub](https://github.com/Emma-EC)  
 - 頁面切版
 - Google 第三方登入
+- 環境部署
 
 王廷安 [GitHub](https://github.com/Tingan111)  
 - 圖片上傳

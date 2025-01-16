@@ -74,6 +74,8 @@ def user_page_view(request, tag="member"):
         wallet = Wallet.objects.filter(user=user).first()
         user = CustomUser.objects.get(id=user.id)
         context["userinfo"] = user.email
+        context["membership"] = user.membership_level
+
         
         if wallet:
             context["wallet_balance"] = wallet.balence
@@ -107,19 +109,19 @@ def user_page_view(request, tag="member"):
         context["activities"] = activities
 
     elif tag == "wallet":
-        # 從 Wallets 模型抓取使用者的錢包資訊
+
+        user = CustomUser.objects.get(id=user.id)
+        context["membership"] = user.membership_level
+        
         wallet = Wallet.objects.filter(user=user).first()
         if wallet:
             context["wallet_balance"] = wallet.balence
+
+            transactions = Payment.objects.filter(user=wallet.user).order_by("-created_at")[:5]
+            context["transactions"] = transactions
         else:
             context["wallet_balance"] = 0  
-
-        # 從 Payments 模型抓取與使用者相關的交易紀錄
-        transactions = Payment.objects.filter(user=wallet.user).order_by("-created_at")[:5]
-        context["transactions"] = transactions
-        
-   
-        
+            context["transactions"] = []  
 
     else:
         # 若沒有符合任何條件，保留基本的 context

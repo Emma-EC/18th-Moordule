@@ -58,9 +58,9 @@ class CustomUserManager(UserManager):
 
 class CustomUser(AbstractUser):
     GENDER_CHOICES = [
-        ("male", "Male"),
-        ("female", "Female"),
-        ("other", "Other"),
+        ("male", "男性"),
+        ("female", "女性"),
+        ("other", "多元性別"),
     ]
 
     HOBBY_CHOICES = [
@@ -95,6 +95,14 @@ class CustomUser(AbstractUser):
         ("Kinmen", "金門縣"),
         ("Lienchiang", "連江縣"),
     ]
+
+    MEMBERSHIP_LEVEL = [
+        ("Basic", "基本會員"),
+        ("Silver", "銀級會員"),
+        ("Gold", "金級會員"),
+        ("Platinum", "白金會員"),
+    ]
+
     bio = models.TextField(
         verbose_name="自我介紹", blank=True, null=True, help_text="介紹一下你自己"
     )
@@ -121,6 +129,8 @@ class CustomUser(AbstractUser):
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = []
     objects = CustomUserManager()
+
+    membership_level = models.CharField(choices=MEMBERSHIP_LEVEL, max_length=10, default="Basic")
 
     class Meta:
         db_table = "users"

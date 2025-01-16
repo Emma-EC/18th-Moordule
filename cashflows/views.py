@@ -8,6 +8,7 @@ import requests
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import redirect, render
 
+from users.models import CustomUser as User
 from moordule import settings
 from .models import Payment, Wallet
 
@@ -126,14 +127,18 @@ def confirm_b(request):
         payment.save()  # 更新資料庫中的狀態
 
         balance = Wallet.objects.filter(user=payment.user).first()
+        bouns_b = 100
         if balance:
-            balance.balence += payment.amount
+            balance.balence += payment.amount + bouns_b
             balance.save()  # 更新餘額
         else:
             Wallet.objects.create(user=payment.user, balence=payment.amount)  # 新增餘額
         # 用戶等級變更
 
-        # 可以選擇將付款資訊顯示或繼續處理
+        user = payment.user
+        user.membership_level = "Gold"
+        user.save()  
+        
         return render(request, "payment/confirm_b.html", {"data": payment})
 
     except Exception as e:
